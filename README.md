@@ -110,6 +110,7 @@ Once the server is running, open your browser and navigate to `http://localhost:
 - **ng-bootstrap**: Angular-specific Bootstrap components, used for UI elements like modals or buttons where needed.
 - **ng-select**: A select component library for Angular, used for dropdowns in the application.
 - **RxJS**: For reactive programming, handling asynchronous data streams.
+- **@angular/localize** is actually required by @ng-bootstrap/ng-bootstrap for internationalization (i18n) features, including the datepicker's month/year headers!
 
 The libraries were chosen to meet only the requirements of the assessment, keeping the project lightweight. Note that Bootstrap was added mid-development as a convenience for utility classes, despite starting with pure SCSS.
 
