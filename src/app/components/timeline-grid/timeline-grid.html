@@ -1,0 +1,14 @@
+<div class="timeline-grid-container">
+    <work-center-panel [workCenters]="workCenters()"/>
+    <div class="timeline-scroll-wrapper">
+        <timeline-panel 
+            [columns]="columns()" 
+            [dateRange]="dateRange()" 
+            [workCenters]="workCenters()"
+            [workOrders]="workOrders()"
+            [zoomLevel]="zoomLevel()"
+            (cellClick)="onCellClick($event)"
+            (orderEdit)="onOrderEdit($event)"
+            (orderDelete)="onOrderDelete($event)" />
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="timeline-header">
+    <h1>Work Orders</h1>
+
+    <div class="form-field">
+        <label for="zoomSelect">Timescale</label>
+        <ng-select 
+                class="custom-select" 
+                id="zoomSelect" 
+                [ngModel]="currentZoom()" 
+                [items]="zoomLevels"
+                [clearable]="false"
+                (change)="selectZoom($event)">
+        </ng-select>
+    </div>
+</div>

@@ -1,0 +1,92 @@
+<div class="order-panel-header">
+    <div>
+        <h3>Work Order Details</h3>
+        <p>Specify the dates, name and status for this order</p>
+    </div>
+
+    <div class="order-panel-actions">
+        <button type="button" class="btn btn-outline-secondary btn-cancel" (click)="dismiss()">
+            Cancel
+        </button>
+        <button type="button" class="btn btn-primary" (click)="save()">
+            {{ data.mode === 'create' ? 'Create' : 'Save' }}
+        </button>
+    </div>
+</div>
+
+<div class="order-panel-body">
+    @if (errorMessage) {
+    <div class="alert alert-danger alert-dismissible">
+        {{ errorMessage }}
+        <button type="button" class="btn-close" (click)="errorMessage = ''"></button>
+    </div>
+    }
+
+    <form [formGroup]="orderForm" class="order-form">
+        <!-- Work Order Name -->
+        <div class="mb-3">
+            <label class="form-label">
+                Work Order Name <span class="text-danger">*</span>
+            </label>
+            <input type="text" formControlName="name" class="form-control" [class.is-invalid]="isFieldInvalid('name')"
+                placeholder="Enter work order name" />
+            @if (isFieldInvalid('name')) {
+            <div class="invalid-feedback d-block">
+                Work order name is required
+            </div>
+            }
+        </div>
+
+        <!-- Status -->
+        <div class="mb-3">
+            <label class="form-label">
+                Status <span class="text-danger">*</span>
+            </label>
+            <ng-select formControlName="status" [items]="statusOptions" bindLabel="label" bindValue="value"
+                [clearable]="false" [searchable]="false" placeholder="Select status"></ng-select>
+        </div>
+
+        <!-- End Date -->
+        <div class="mb-3">
+            <label class="form-label">
+                End Date <span class="text-danger">*</span>
+            </label>
+            <div class="input-group">
+                <input class="form-control" placeholder="yyyy-mm-dd" formControlName="endDate" ngbDatepicker
+                    #endDatePicker="ngbDatepicker" [class.is-invalid]="isFieldInvalid('endDate')" />
+                <button class="btn btn-outline-secondary" (click)="endDatePicker.toggle()" type="button">
+                    📅
+                </button>
+            </div>
+            @if (isFieldInvalid('endDate')) {
+            <div class="invalid-feedback d-block">
+                End date is required
+            </div>
+            }
+            @if (dateRangeError()) {
+            <div class="invalid-feedback d-block">
+                End date must be after start date
+            </div>
+            }
+        </div>
+
+        <!-- Start Date -->
+        <div class="mb-3">
+            <label class="form-label">
+                Start Date <span class="text-danger">*</span>
+            </label>
+            <div class="input-group">
+                <input class="form-control" placeholder="yyyy-mm-dd" formControlName="startDate" ngbDatepicker
+                    #startDatePicker="ngbDatepicker" [class.is-invalid]="isFieldInvalid('startDate')" />
+                <button class="btn btn-outline-secondary" (click)="startDatePicker.toggle()" type="button">
+                    📅
+                </button>
+            </div>
+            @if (isFieldInvalid('startDate')) {
+            <div class="invalid-feedback d-block">
+                Start date is required
+            </div>
+            }
+        </div>
+    </form>
+</div>

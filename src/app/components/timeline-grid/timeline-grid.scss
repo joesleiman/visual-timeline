@@ -1,0 +1,11 @@
+.timeline-grid-container {
+    position: relative;
+    display: flex;
+    height: 500px;//var(--grid-height); for testing now keep it 500
+}
+
+.timeline-scroll-wrapper {
+    flex: 1;
+    overflow-x: auto;
+    min-width: 0;
+}

@@ -1,0 +1,9 @@
+<!-- Work Center Names (Fixed Left Panel) -->
+<div class="work-center-panel">
+    <div class="panel-header">Work Center</div>
+    @for (workCenter of workCenters(); track workCenter.docId) {
+    <div class="work-center-row">
+        {{ workCenter.data.name }}
+    </div>
+    }
+</div>

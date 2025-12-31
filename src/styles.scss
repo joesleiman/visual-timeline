@@ -1,1 +1,84 @@
 /* You can add global styles to this file, and also import other style files */
+@import '@ng-select/ng-select/themes/default.theme.css';
+
+:root {
+  --header-row-height: 33px;
+  --row-width: 380px;
+  --regular-row-height: 48px;
+  --work-center-panel-padding-left: 31px;
+  --panel-header-color: #687196;
+  --color-black: #030929;
+  --grid-height: 749px;
+  --timeline-cell-width: 100px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Circular-Std', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: white;
+}
+
+// Tailwind-like utility classes
+.bg-blue-100 {
+  background-color: #dbeafe;
+}
+
+.bg-purple-100 {
+  background-color: #e9d5ff;
+}
+
+.bg-green-100 {
+  background-color: #d1fae5;
+}
+
+.bg-orange-100 {
+  background-color: #ffedd5;
+}
+
+.text-blue-800 {
+  color: #1e40af;
+}
+
+.text-purple-800 {
+  color: #6b21a8;
+}
+
+.text-green-800 {
+  color: #166534;
+}
+
+.text-orange-800 {
+  color: #9a3412;
+}
+
+.border-blue-300 {
+  border-color: #93c5fd;
+}
+
+.border-purple-300 {
+  border-color: #d8b4fe;
+}
+
+.border-green-300 {
+  border-color: #86efac;
+}
+
+.border-orange-300 {
+  border-color: #fdba74;
+}
+
+.text-black-100 {
+  color: #030929;
+
+}
+
+.order-panel {
+  width: 591px !important;
+  max-width: 90vw;
+}

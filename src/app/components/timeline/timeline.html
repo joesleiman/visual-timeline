@@ -1,0 +1,6 @@
+<div class="timeline-container">
+    <div class="timeline-card">
+        <timeline-header [currentZoom]="zoomLevel()" (zoomChange)="onZoomChange($event)"/>
+        <timeline-grid [zoomLevel]="zoomLevel()"/>
+    </div>
+</div>

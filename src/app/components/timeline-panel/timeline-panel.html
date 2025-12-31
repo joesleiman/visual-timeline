@@ -1,0 +1,30 @@
+<div class="timeline-panel">
+    <!-- Column Headers -->
+    <div class="column-headers">
+        @for (column of columns(); track column.date.getTime()) {
+        <div class="column-header">
+            <div>{{ column.label }} {{ column.subLabel }}</div>
+        </div>
+        }
+    </div>
+
+    <!-- Work Center Rows -->
+    @for (workCenter of workCenters(); track workCenter.docId) {
+    <div class="timeline-row">
+        <!-- Empty cells (clickable) -->
+        @for (column of columns(); track column.date.getTime()) {
+        <div class="timeline-cell" [class.today-column]="isToday(column.date)"
+            (click)="onCellClick(workCenter.docId, column.date)"></div>
+        }
+
+        <!-- Work Order Bars -->
+        @for (item of getVisibleOrdersForWorkCenter(workCenter.docId); track item.order.docId) {
+        <work-order-bar 
+                [order]="item.order" 
+                [position]="item.position" 
+                (edit)="orderEdit.emit($event)"
+                (delete)="orderDelete.emit($event)"/>
+        }
+    </div>
+    }
+</div>

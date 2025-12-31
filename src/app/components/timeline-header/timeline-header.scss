@@ -1,0 +1,35 @@
+h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-black);
+}
+
+.form-field {
+    display: flex;
+    align-items: center;
+    margin: 1.625rem 0 1.5rem;
+    height: 25px;
+}
+
+label {
+    font-size: 0.8125rem;
+    color: rgba(104, 113, 150, 1);
+    font-weight: 500; // to match circular-std-book.woff2, on sketch it shows wrong value
+    border-radius: 5px 0px 0px 5px;
+    background-color: rgba(241, 243, 248, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    width: 75px;
+}
+
+
+
+.ng-select.custom-select ::ng-deep .ng-select-container {
+    height: 25px;
+    width: 75px;
+    min-height: 25px;
+    font-size: 0.8125rem;
+    border-radius: 0;
+}

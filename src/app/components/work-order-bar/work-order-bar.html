@@ -1,0 +1,21 @@
+<div class="work-order-bar" 
+    [style.left.px]="position().left" 
+    [style.width.px]="position().width"
+    [class.menu-active]="menuOpen()"
+    [ngClass]="statusClass()">
+    <div class="bar-content">
+        <span class="order-name">{{ order().data.name }}</span>
+        <div class="bar-actions">
+            <span class="status-badge">{{ statusLabel() }}</span>
+            <button class="menu-button" (click)="toggleMenu(); $event.stopPropagation()">
+                ⋮
+            </button>
+            @if (menuOpen()) {
+            <div class="menu-dropdown" (click)="$event.stopPropagation()">
+                <button (click)="onEdit()">Edit</button>
+                <button (click)="onDelete()" class="delete-button">Delete</button>
+            </div>
+            }
+        </div>
+    </div>
+</div>

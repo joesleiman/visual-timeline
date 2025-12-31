@@ -1,0 +1,72 @@
+ h3 {
+     color: #2F3059;
+     font-size: 1.25rem;
+     font-weight: 600;
+     margin-bottom: 5px;
+ }
+
+ p {
+     color: rgba(104, 113, 150, 1);
+     font-size: 1rem;
+     font-weight: 500;
+ }
+
+ .order-panel-header {
+     padding-top: 1rem;
+     display: flex;
+     justify-content: space-between;
+     border-bottom: 1px solid #dee2e6;
+ }
+
+ .order-panel-actions button {
+     width: 66px;
+     height: 32px;
+     text-align: center;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .btn-cancel {
+     color: #2F3059;
+ }
+
+ .order-panel-header,
+ .order-panel-body {
+     padding-left: 1.5rem;
+     padding-right: 1.5rem;
+ }
+
+ .order-panel-actions {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 0.5rem;
+ }
+
+ .order-panel-body {
+     padding-top: 1.5rem;
+ }
+
+ input {
+     height: 38px;
+     box-shadow: rgba(216, 220, 235, 1) 0 0 0 1px, rgba(200, 207, 233, 1) 0 1.5px 3px -1.5px, rgba(216, 220, 235, 1) 0 1px 0.5px -1px;
+     border-radius: 5px;
+ }
+
+ .input-group button{
+     height: 38px;
+     box-shadow: rgba(216, 220, 235, 1) 0 0 0 1px, rgba(200, 207, 233, 1) 0 1.5px 3px -1.5px, rgba(216, 220, 235, 1) 0 1px 0.5px -1px;
+     border-radius: 5px;
+     border-color: #C8CFE9;
+ }
+
+ .form-label {
+     color: rgba(104, 113, 150, 1);
+     font-size: 0.875rem;
+     font-weight: 400;
+ }
+
+ .text-danger {
+     color: #dc3545;
+ }
