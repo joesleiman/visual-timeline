@@ -26,5 +26,11 @@
                 (delete)="orderDelete.emit($event)"/>
         }
     </div>
+      <!-- Today Indicator Line -->
+        @if (todayPosition() !== null) {
+        <div class="today-indicator" [style.left.px]="todayPosition()!">
+            <div class="today-label">Today</div>
+        </div>
+        }
     }
 </div>

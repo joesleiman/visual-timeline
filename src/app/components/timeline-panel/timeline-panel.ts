@@ -1,4 +1,4 @@
-import { Component, inject, input, output } from '@angular/core';
+import { Component, inject, input, output, computed } from '@angular/core';
 import { DateRange, TimelineColumn, ZoomLevel } from '../../services/date-utils.service';
 import { WorkCenterDocument, WorkOrderDocument } from '../../models';
 import { WorkOrderBar } from '../work-order-bar/work-order-bar';
@@ -24,7 +24,7 @@ export class TimelinePanel {
   cellClick = output<CellClickEvent>();
   orderEdit = output<WorkOrderDocument>();
   orderDelete = output<string>();
-  
+
   dateUtils = inject(DateUtilsService);
 
   isToday(date: Date): boolean {
@@ -34,6 +34,20 @@ export class TimelinePanel {
     compareDate.setHours(0, 0, 0, 0);
     return compareDate.getTime() === today.getTime();
   }
+
+  todayPosition = computed(() => {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const range = this.dateRange();
+
+    if (today < range.start || today > range.end || this.zoomLevel() !== 'day') {
+      return null;
+    }
+
+    const totalDays = this.dateUtils.daysBetween(range.start, range.end);
+    const offsetDays = this.dateUtils.daysBetween(range.start, today);
+    return (offsetDays * 100) + 50;
+  });
 
   onCellClick(workCenterId: string, date: Date): void {
     this.cellClick.emit({ workCenterId, date });

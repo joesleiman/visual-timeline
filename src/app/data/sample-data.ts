@@ -22,8 +22,8 @@ export const SAMPLE_WORK_ORDERS: WorkOrderDocument[] = [
             name: 'Order A-100',
             workCenterId: 'wc-1',
             status: 'complete',
-            startDate: '2025-12-18',
-            endDate: '2025-12-24'
+            startDate: '2026-04-05',
+            endDate: '2026-04-12'
         }
     },
     
@@ -35,8 +35,8 @@ export const SAMPLE_WORK_ORDERS: WorkOrderDocument[] = [
             name: 'Order B-200',
             workCenterId: 'wc-2',
             status: 'in-progress',
-            startDate: '2025-12-28',
-            endDate: '2026-01-05'
+            startDate: '2026-03-28',
+            endDate: '2026-04-012'
         }
     },
     
@@ -48,8 +48,8 @@ export const SAMPLE_WORK_ORDERS: WorkOrderDocument[] = [
             name: 'Order C-300',
             workCenterId: 'wc-3',
             status: 'blocked',
-            startDate: '2026-01-10',
-            endDate: '2026-01-20'
+            startDate: '2026-03-30',
+            endDate: '2026-04-20'
         }
     },
     
@@ -61,23 +61,23 @@ export const SAMPLE_WORK_ORDERS: WorkOrderDocument[] = [
             name: 'Order D-400',
             workCenterId: 'wc-4',
             status: 'open',
-            startDate: '2026-01-15',
-            endDate: '2026-01-25'
+            startDate: '2026-03-25',
+            endDate: '2026-03-30'
         }
     },
     
-    // 5. First order on wc-5 (non-overlapping) - visible in day view
-    {
-        docId: 'wo-5',
-        docType: DocumentType.WorkOrder,
-        data: {
-            name: 'Order E-500',
-            workCenterId: 'wc-5',
-            status: 'complete',
-            startDate: '2025-12-20',
-            endDate: '2025-12-27'
-        }
-    },
+    //5. First order on wc-5 (non-overlapping) - visible in day view
+        {
+            docId: 'wo-5',
+            docType: DocumentType.WorkOrder,
+            data: {
+                name: 'Order E-500',
+                workCenterId: 'wc-5',
+                status: 'complete',
+                startDate: '2026-03-20',
+                endDate: '2026-04-27'
+            }
+        },
     
     // 6. Second order on wc-5 (non-overlapping) - visible in day view
     {
@@ -87,8 +87,8 @@ export const SAMPLE_WORK_ORDERS: WorkOrderDocument[] = [
             name: 'Order F-600',
             workCenterId: 'wc-5',
             status: 'in-progress',
-            startDate: '2025-12-28',
-            endDate: '2026-01-06'
+            startDate: '2026-04-30',
+            endDate: '2026-05-06'
         }
     },
     
@@ -100,8 +100,8 @@ export const SAMPLE_WORK_ORDERS: WorkOrderDocument[] = [
             name: 'Order G-700',
             workCenterId: 'wc-5',
             status: 'open',
-            startDate: '2026-01-08',
-            endDate: '2026-01-14'
+            startDate: '2026-05-08',
+            endDate: '2026-05-14'
         }
     },
     
@@ -113,8 +113,8 @@ export const SAMPLE_WORK_ORDERS: WorkOrderDocument[] = [
             name: 'Order H-800',
             workCenterId: 'wc-5',
             status: 'blocked',
-            startDate: '2026-01-16',
-            endDate: '2026-01-22'
+            startDate: '2026-03-16',
+            endDate: '2026-06-22'
         }
     },
     
@@ -129,8 +129,8 @@ export const SAMPLE_WORK_ORDERS: WorkOrderDocument[] = [
             name: 'Order I-900',
             workCenterId: 'wc-1',
             status: 'complete',
-            startDate: '2025-10-15',
-            endDate: '2025-10-25'
+            startDate: '2026-04-15',
+            endDate: '2026-04-25'
         }
     },
     
@@ -142,8 +142,8 @@ export const SAMPLE_WORK_ORDERS: WorkOrderDocument[] = [
             name: 'Order J-1000',
             workCenterId: 'wc-2',
             status: 'in-progress',
-            startDate: '2025-11-10',
-            endDate: '2025-11-25'
+            startDate: '2026-03-10',
+            endDate: '2026-03-25'
         }
     },
     
@@ -158,8 +158,8 @@ export const SAMPLE_WORK_ORDERS: WorkOrderDocument[] = [
             name: 'Order K-1100',
             workCenterId: 'wc-3',
             status: 'complete',
-            startDate: '2025-05-01',
-            endDate: '2025-05-30'
+            startDate: '2026-05-01',
+            endDate: '2026-05-30'
         }
     },
     
@@ -184,8 +184,8 @@ export const SAMPLE_WORK_ORDERS: WorkOrderDocument[] = [
             name: 'Order M-1300',
             workCenterId: 'wc-1',
             status: 'in-progress',
-            startDate: '2025-07-15',
-            endDate: '2025-08-20'
+            startDate: '2026-07-15',
+            endDate: '2026-08-20'
         }
     },
     
@@ -197,8 +197,8 @@ export const SAMPLE_WORK_ORDERS: WorkOrderDocument[] = [
             name: 'Order N-1400',
             workCenterId: 'wc-3',
             status: 'in-progress',
-            startDate: '2025-09-01',
-            endDate: '2025-11-30'
+            startDate: '2026-09-01',
+            endDate: '2026-11-30'
         }
     }
 ];

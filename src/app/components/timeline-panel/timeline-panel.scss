@@ -55,3 +55,27 @@
 .timeline-cell:hover {
     background: #dbeafe;
 }
+
+.today-indicator {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #ef4444;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.today-label {
+    position: absolute;
+    top: 0.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ef4444;
+    color: white;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    white-space: nowrap;
+    font-weight: 500;
+}
